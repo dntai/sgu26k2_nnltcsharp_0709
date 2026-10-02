@@ -72,5 +72,20 @@ namespace Buoi7_FrmThucHienPhepTinh
             txtKetQua.Text = "";
             txtSoA.Focus();
         }
+
+        private void NhapSo_Validating(object sender, CancelEventArgs e)
+        {
+            TextBox txtSo = sender as TextBox;
+            try
+            {
+                int so = int.Parse(txtSo.Text);
+                errorLoi.SetError(txtSo, null);
+            }
+            catch
+            {
+                errorLoi.SetError(txtSo, "Loi nhap so!");
+                e.Cancel = true;
+            }
+        }
     }
 }

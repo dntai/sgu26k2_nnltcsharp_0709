@@ -28,153 +28,175 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSoA = new System.Windows.Forms.TextBox();
-            this.txtSoB = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtKetQua = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCong = new System.Windows.Forms.Button();
-            this.btnTru = new System.Windows.Forms.Button();
-            this.btnChia = new System.Windows.Forms.Button();
-            this.btnNhan = new System.Windows.Forms.Button();
-            this.btnTiepTuc = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            label1 = new Label();
+            txtSoA = new TextBox();
+            txtSoB = new TextBox();
+            label2 = new Label();
+            txtKetQua = new TextBox();
+            label3 = new Label();
+            btnCong = new Button();
+            btnTru = new Button();
+            btnChia = new Button();
+            btnNhan = new Button();
+            btnTiepTuc = new Button();
+            btnThoat = new Button();
+            errorLoi = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorLoi).BeginInit();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số a: ";
+            label1.AutoSize = true;
+            label1.Location = new Point(16, 14);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(45, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Số a: ";
             // 
             // txtSoA
             // 
-            this.txtSoA.Location = new System.Drawing.Point(65, 6);
-            this.txtSoA.Name = "txtSoA";
-            this.txtSoA.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSoA.Size = new System.Drawing.Size(130, 20);
-            this.txtSoA.TabIndex = 1;
-            this.txtSoA.Text = "2";
+            txtSoA.Location = new Point(87, 9);
+            txtSoA.Margin = new Padding(4, 5, 4, 5);
+            txtSoA.Name = "txtSoA";
+            txtSoA.RightToLeft = RightToLeft.Yes;
+            txtSoA.Size = new Size(172, 27);
+            txtSoA.TabIndex = 1;
+            txtSoA.Text = "2";
+            txtSoA.Validating += NhapSo_Validating;
             // 
             // txtSoB
             // 
-            this.txtSoB.Location = new System.Drawing.Point(65, 32);
-            this.txtSoB.Name = "txtSoB";
-            this.txtSoB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSoB.Size = new System.Drawing.Size(130, 20);
-            this.txtSoB.TabIndex = 3;
-            this.txtSoB.Text = "3";
+            txtSoB.Location = new Point(87, 49);
+            txtSoB.Margin = new Padding(4, 5, 4, 5);
+            txtSoB.Name = "txtSoB";
+            txtSoB.RightToLeft = RightToLeft.Yes;
+            txtSoB.Size = new Size(172, 27);
+            txtSoB.TabIndex = 3;
+            txtSoB.Text = "3";
+            txtSoB.Validating += NhapSo_Validating;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Số b:";
+            label2.AutoSize = true;
+            label2.Location = new Point(16, 54);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(42, 20);
+            label2.TabIndex = 2;
+            label2.Text = "Số b:";
             // 
             // txtKetQua
             // 
-            this.txtKetQua.Location = new System.Drawing.Point(65, 85);
-            this.txtKetQua.Name = "txtKetQua";
-            this.txtKetQua.ReadOnly = true;
-            this.txtKetQua.Size = new System.Drawing.Size(130, 20);
-            this.txtKetQua.TabIndex = 5;
-            this.txtKetQua.Text = "5";
-            this.txtKetQua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtKetQua.Location = new Point(87, 131);
+            txtKetQua.Margin = new Padding(4, 5, 4, 5);
+            txtKetQua.Name = "txtKetQua";
+            txtKetQua.ReadOnly = true;
+            txtKetQua.Size = new Size(172, 27);
+            txtKetQua.TabIndex = 5;
+            txtKetQua.Text = "5";
+            txtKetQua.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Kết quả:";
+            label3.AutoSize = true;
+            label3.Location = new Point(16, 135);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(63, 20);
+            label3.TabIndex = 4;
+            label3.Text = "Kết quả:";
             // 
             // btnCong
             // 
-            this.btnCong.Location = new System.Drawing.Point(201, 4);
-            this.btnCong.Name = "btnCong";
-            this.btnCong.Size = new System.Drawing.Size(31, 23);
-            this.btnCong.TabIndex = 6;
-            this.btnCong.Text = "+";
-            this.btnCong.UseVisualStyleBackColor = true;
+            btnCong.Location = new Point(268, 6);
+            btnCong.Margin = new Padding(4, 5, 4, 5);
+            btnCong.Name = "btnCong";
+            btnCong.Size = new Size(41, 35);
+            btnCong.TabIndex = 6;
+            btnCong.Text = "+";
+            btnCong.UseVisualStyleBackColor = true;
             // 
             // btnTru
             // 
-            this.btnTru.Location = new System.Drawing.Point(238, 4);
-            this.btnTru.Name = "btnTru";
-            this.btnTru.Size = new System.Drawing.Size(31, 23);
-            this.btnTru.TabIndex = 7;
-            this.btnTru.Text = "-";
-            this.btnTru.UseVisualStyleBackColor = true;
+            btnTru.Location = new Point(317, 6);
+            btnTru.Margin = new Padding(4, 5, 4, 5);
+            btnTru.Name = "btnTru";
+            btnTru.Size = new Size(41, 35);
+            btnTru.TabIndex = 7;
+            btnTru.Text = "-";
+            btnTru.UseVisualStyleBackColor = true;
             // 
             // btnChia
             // 
-            this.btnChia.Location = new System.Drawing.Point(238, 30);
-            this.btnChia.Name = "btnChia";
-            this.btnChia.Size = new System.Drawing.Size(31, 23);
-            this.btnChia.TabIndex = 9;
-            this.btnChia.Text = "/";
-            this.btnChia.UseVisualStyleBackColor = true;
+            btnChia.Location = new Point(317, 46);
+            btnChia.Margin = new Padding(4, 5, 4, 5);
+            btnChia.Name = "btnChia";
+            btnChia.Size = new Size(41, 35);
+            btnChia.TabIndex = 9;
+            btnChia.Text = "/";
+            btnChia.UseVisualStyleBackColor = true;
             // 
             // btnNhan
             // 
-            this.btnNhan.Location = new System.Drawing.Point(201, 30);
-            this.btnNhan.Name = "btnNhan";
-            this.btnNhan.Size = new System.Drawing.Size(31, 23);
-            this.btnNhan.TabIndex = 8;
-            this.btnNhan.Text = "*";
-            this.btnNhan.UseVisualStyleBackColor = true;
+            btnNhan.Location = new Point(268, 46);
+            btnNhan.Margin = new Padding(4, 5, 4, 5);
+            btnNhan.Name = "btnNhan";
+            btnNhan.Size = new Size(41, 35);
+            btnNhan.TabIndex = 8;
+            btnNhan.Text = "*";
+            btnNhan.UseVisualStyleBackColor = true;
             // 
             // btnTiepTuc
             // 
-            this.btnTiepTuc.Location = new System.Drawing.Point(201, 56);
-            this.btnTiepTuc.Name = "btnTiepTuc";
-            this.btnTiepTuc.Size = new System.Drawing.Size(68, 23);
-            this.btnTiepTuc.TabIndex = 10;
-            this.btnTiepTuc.Text = "Tiếp tục";
-            this.btnTiepTuc.UseVisualStyleBackColor = true;
-            this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
+            btnTiepTuc.Location = new Point(268, 86);
+            btnTiepTuc.Margin = new Padding(4, 5, 4, 5);
+            btnTiepTuc.Name = "btnTiepTuc";
+            btnTiepTuc.Size = new Size(91, 35);
+            btnTiepTuc.TabIndex = 10;
+            btnTiepTuc.Text = "Tiếp tục";
+            btnTiepTuc.UseVisualStyleBackColor = true;
+            btnTiepTuc.Click += btnTiepTuc_Click;
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(201, 85);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(68, 23);
-            this.btnThoat.TabIndex = 11;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Location = new Point(268, 131);
+            btnThoat.Margin = new Padding(4, 5, 4, 5);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(91, 35);
+            btnThoat.TabIndex = 11;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // errorLoi
+            // 
+            errorLoi.ContainerControl = this;
             // 
             // FrmThucHienPhepTinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 116);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnTiepTuc);
-            this.Controls.Add(this.btnChia);
-            this.Controls.Add(this.btnNhan);
-            this.Controls.Add(this.btnTru);
-            this.Controls.Add(this.btnCong);
-            this.Controls.Add(this.txtKetQua);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSoB);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtSoA);
-            this.Controls.Add(this.label1);
-            this.Name = "FrmThucHienPhepTinh";
-            this.Text = "Thực hiện phép tính";
-            this.Load += new System.EventHandler(this.FrmThucHienPhepTinh_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(375, 178);
+            Controls.Add(btnThoat);
+            Controls.Add(btnTiepTuc);
+            Controls.Add(btnChia);
+            Controls.Add(btnNhan);
+            Controls.Add(btnTru);
+            Controls.Add(btnCong);
+            Controls.Add(txtKetQua);
+            Controls.Add(label3);
+            Controls.Add(txtSoB);
+            Controls.Add(label2);
+            Controls.Add(txtSoA);
+            Controls.Add(label1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "FrmThucHienPhepTinh";
+            Text = "Thực hiện phép tính";
+            Load += FrmThucHienPhepTinh_Load;
+            ((System.ComponentModel.ISupportInitialize)errorLoi).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -191,6 +213,7 @@
         private System.Windows.Forms.Button btnNhan;
         private System.Windows.Forms.Button btnTiepTuc;
         private System.Windows.Forms.Button btnThoat;
+        private ErrorProvider errorLoi;
     }
 }
 

@@ -1,6 +1,6 @@
-﻿namespace NNLTCSharp.WinForms
+﻿namespace NNLTCS.WinForms
 {
-    partial class FrmTraiTim
+    partial class MainForm1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTraiTim));
+            btnOK = new Button();
             SuspendLayout();
             // 
-            // FrmTraiTim
+            // btnOK
+            // 
+            btnOK.Location = new Point(156, 89);
+            btnOK.Name = "btnOK";
+            btnOK.Size = new Size(94, 29);
+            btnOK.TabIndex = 0;
+            btnOK.Text = "&OK";
+            btnOK.UseVisualStyleBackColor = true;
+            btnOK.Click += btnOK_Click;
+            // 
+            // MainForm1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(471, 444);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "FrmTraiTim";
-            Opacity = 0.3D;
-            Text = "Form1";
-            TransparencyKey = Color.White;
-            MouseDown += FrmTraiTim_MouseDown;
-            MouseMove += FrmTraiTim_MouseMove;
+            BackColor = Color.GreenYellow;
+            ClientSize = new Size(382, 212);
+            Controls.Add(btnOK);
+            Name = "MainForm1";
+            Text = "MainForm1";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnOK;
     }
 }
-
