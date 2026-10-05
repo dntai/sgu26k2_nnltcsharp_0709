@@ -56,7 +56,7 @@
             txtHoTen.Location = new Point(100, 9);
             txtHoTen.Margin = new Padding(4, 5, 4, 5);
             txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(223, 27);
+            txtHoTen.Size = new Size(291, 27);
             txtHoTen.TabIndex = 0;
             txtHoTen.Validating += txtHoTen_Validating;
             // 
@@ -66,7 +66,7 @@
             txtNgaySinh.Location = new Point(100, 49);
             txtNgaySinh.Margin = new Padding(4, 5, 4, 5);
             txtNgaySinh.Name = "txtNgaySinh";
-            txtNgaySinh.Size = new Size(223, 27);
+            txtNgaySinh.Size = new Size(291, 27);
             txtNgaySinh.TabIndex = 1;
             txtNgaySinh.Validating += txtNgaySinh_Validating;
             // 
@@ -87,7 +87,7 @@
             txtSoThich.Margin = new Padding(4, 5, 4, 5);
             txtSoThich.Multiline = true;
             txtSoThich.Name = "txtSoThich";
-            txtSoThich.Size = new Size(223, 75);
+            txtSoThich.Size = new Size(291, 83);
             txtSoThich.TabIndex = 2;
             // 
             // label3
@@ -103,7 +103,7 @@
             // btnXacNhan
             // 
             btnXacNhan.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            btnXacNhan.Location = new Point(100, 173);
+            btnXacNhan.Location = new Point(100, 181);
             btnXacNhan.Margin = new Padding(4, 5, 4, 5);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.Size = new Size(148, 35);
@@ -121,7 +121,7 @@
             AcceptButton = btnXacNhan;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(340, 221);
+            ClientSize = new Size(408, 229);
             Controls.Add(btnXacNhan);
             Controls.Add(txtSoThich);
             Controls.Add(label3);
