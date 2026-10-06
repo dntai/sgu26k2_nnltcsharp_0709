@@ -1,0 +1,405 @@
+/*
+<pre>
+*/
+/*
+@import "/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=2678400";
+*/
+/* Attaching the background looks good, but it slows the pages down too much on slower computers. */
+/* body { background-attachment: fixed } */
+/*
+a { text-decoration: none } 
+*/
+/* Donations link to be uncommented during fundraising drives  */
+#siteNotice {
+    margin-top:5px;
+    padding-left: 4px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Make all pages that aren't within the main namespace have a gold background. This idea was copied from wikt:sv:. See [[m:Help:Namespace]] for a listing of the namespaces.  */
+
+ .ns--0 { background: #f9f9f9 url('headbg.jpg') no-repeat }
+ .ns--1, .ns-1, .ns-2, .ns-3, .ns-4, .ns-5, .ns-6, .ns-7, .ns-8, .ns-9, .ns-10, .ns-11, .ns-12, .ns-13, .ns-14, .ns-15 { background: #ffffef url('http://upload.wikimedia.org/wikipedia/commons/d/d7/Headbgyellow.jpg') no-repeat }
+
+/* Display "Bách khoa toàn thư mở Wikipedia" */
+#siteSub {
+    display: inline;
+    font-size: 92%;
+    font-weight: normal;
+}
+
+#bodyContent #siteSub a {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    padding-right: 0;
+}
+
+/* Bold 'sửa đổi' link to encourage newcomers */
+#ca-edit { font-weight: bold !important; }
+
+/* Display "User $1, you are already logged in!"
+   ([[MediaWiki:Alreadyloggedin]]) in red and bold */
+div.alreadyloggedin { color: red; font-weight: bold; }
+
+@media print {
+    /* Do not print edit link in templates using Template:Ed
+       Do not print certain classes that shouldn't appear on paper */
+    .editlink, .noprint, .metadata, .dablink { display: none }
+}
+
+
+/* Accessibility experiment: make diff changes not just colour-based */ 
+
+.diffchange {
+    font-weight: bold;
+    background-color: inherit;
+}
+
+td.diff-addedline, td.diff-deletedline, td.diff-context {
+    font-size: 85%;
+    color: inherit;
+}
+
+#pt-login {
+  font-weight: bold;
+  font-size: 110%;
+}
+
+form#userlogin, form#userlogin2 {
+  float: left;
+  padding: 1em 1em .7em 1em;
+  background-color: #ffffe6;
+  border: 2px solid #fc6;
+  color: #000;
+  margin-right: 2em;
+}
+
+form#userlogin table {
+  float: left;
+  background-color: #ffffe6;
+  color: #000;
+  display: block;
+}
+
+p.error {
+  font-weight: bold;
+}
+
+/* Hide extra edit tools when uploading */
+form#upload div#edittools {
+  display: none;
+}
+
+/* Class styles */
+
+/* .toccolours added here because version in 
+   monobook/main.css wasn't being used by the print style */
+.toccolours { 
+   border:1px solid #aaaaaa;
+   background-color:#f9f9f9;
+   padding:5px;
+   font-size: 95%;
+}
+
+#p-nav h5 {
+   display: none;
+}
+
+.portlet a {
+   text-decoration: none;
+}
+
+.portlet a:hover {
+   text-decoration: underline;
+}
+
+#p-nav .pBody {
+   padding-right: 0;
+}
+
+#p-nav a {
+   display: block;
+   width: 100%;
+}
+
+/* p {
+   margin: 1em 0;
+} */
+
+/* Standard Navigationsleisten, tức hộp đóng/mở từ .de.*/
+ 
+div.Boxmerge,
+div.NavFrame {
+        margin: 0px;
+        padding: 2px;
+        border: 1px solid #aaaaaa;
+        text-align: center;
+        border-collapse: collapse;
+        font-size: 95%;
+}
+div.Boxmerge div.NavFrame {
+        border-style: none;
+        border-style: hidden;
+}
+div.NavFrame + div.NavFrame {
+        border-top-style: none;
+        border-top-style: hidden;
+}
+div.NavPic {
+        background-color: #ffffff;
+        margin: 0px;
+        padding: 2px;
+        float: left;
+}
+div.NavFrame div.NavHead {
+        height: 1.6em;
+        font-weight: bold;
+        font-size: 100%;
+        background-color: #efefef;
+        position:relative;
+}
+div.NavFrame p {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+        font-size: 100%;
+}
+div.NavEnd {
+        margin: 0px;
+        padding: 0px;
+        line-height: 1px;
+        clear: both;
+}
+a.NavToggle {
+        position:absolute;
+        top:0px;
+        right:3px;
+        font-weight:normal;
+        font-size:smaller;
+}
+
+/* Remove padding from external links displayed without icon */
+#bodyContent .plainlinks a {padding: 0px !important}
+
+/* Special characters list below edit window works better without underlining */
+#editpage-specialchars a { width: 1em; text-decoration: none; }
+#editpage-specialchars a:hover { text-decoration: underline; }
+
+/* If you don't want to see special characters list at all,
+   put the following line in your User:You/monobook.css file
+  (and remove the slash-asterisk comments) */
+/* #editpage-specialchars { display: none; } */
+
+/* Provide special icons on the titles of pages of certain namespaces. Basically, we'll want to have a different icon for each namespace, except for the main one. The icons are culled from various parts of the interface and a few different MediaWiki websites. */
+
+h1.firstHeading {
+   background-position: bottom right; background-repeat: no-repeat;
+}
+
+/* Special pages */
+body.ns--1 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Nuvola_apps_package_development.png/16px-Nuvola_apps_package_development.png');
+}
+
+/* User pages */
+body.ns-2 h1.firstHeading, body.ns-3 h1.firstHeading {
+   background-image: url('/skins/monobook/user.gif');
+}
+
+/* Project pages */
+body.ns-4 h1.firstHeading, body.ns-5 h1.firstHeading {
+   background-image: url('/favicon.ico');
+}
+
+/* Image pages - we need a better icon for this */
+body.ns-6 h1.firstHeading, body.ns-7 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Nuvola_apps_package_graphics.png/16px-Nuvola_apps_package_graphics.png');
+}
+
+/* MediaWiki pages */
+body.ns-8 h1.firstHeading, body.ns-9 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/1/15/WikiThanks.png/16px-WikiThanks.png');
+}
+
+/* Template pages */
+body.ns-10 h1.firstHeading, body.ns-11 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Nuvola_apps_kig.png/16px-Nuvola_apps_kig.png');
+}
+
+/* Help pages */
+body.ns-12 h1.firstHeading, body.ns-13 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Nuvola_apps_ktip.png/16px-Nuvola_apps_ktip.png');
+}
+
+/* Category pages */
+body.ns-14 h1.firstHeading, body.ns-15 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Nuvola_filesystems_folder.png/16px-Nuvola_filesystems_folder.png');
+}
+
+/* Portal pages */
+body.ns-16 h1.firstHeading, body.ns-17 h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Portal.svg/16px-Portal.svg.png');
+}
+
+/* Featured articles */
+body.FA h1.firstHeading {
+   background-image: url('http://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Fairytale_bookmark.png/16px-Fairytale_bookmark.png');
+}
+
+/* Stylesheet-based image filter */
+*.filter-images img {
+   display: none !important;
+}
+*.filter-images *.show-image img {
+   display: block !important;
+}
+
+/* Stylesheet-based link filter */
+*.filter-links a.external, *.filter-links span.urlexpansion {
+   display: none !important;
+}
+*.filter-links *.show-link a.external {
+   display: inline !important;
+}
+
+/* Masthead on [[Trang Chính]] */
+h1#masthead {
+   display: block !important;
+   border-bottom-style: none;
+   float: right;
+   font-size: 150%;
+   position: absolute;
+   right: 2%;
+   top: .25em;
+}
+
+h1#masthead-down {
+   display: block !important;
+   border-bottom-style: none;
+   float: right;
+   font-size: 150%;
+   position: absolute;
+   right: 2%;
+   top: 1.25em;
+}
+
+/* Radio button at gõ tiếng Việt */
+label.radio {width: 80%; font-size: 95%;}
+
+/* Fit searchbox buttons on one line */
+input.searchButton {padding-left: 0.25em; padding-right: 0.25em}
+
+/* Highlight focused footnotes and references */
+sup.reference:target, ol.references li:target {
+    background-color: #ffffcc;
+}
+sup.reference:target {
+    font-weight: bold;
+}
+
+/* Sửa những thành viên cố tình giấu thanh bên v.v. ở trang cá nhân */
+body.ns-2 div#bodyContent > * {
+    position: static !important;
+    max-width: 100% !important;
+}
+
+/* Trang thảo luận: Thêm màu khi vô hàng */
+.ns-1 dd, .ns-3 dd, .ns-5 dd, .ns-7 dd, .ns-9 dd,
+.ns-11 dd, .ns-13 dd,.ns-15 dd, .ns-101 dd, .ns-103 dd, .ns-105 dd {
+margin:0;
+padding:0;
+}
+ 
+.ns-1 dl, .ns-3 dl, .ns-5 dl, .ns-7 dl, .ns-9 dl,
+.ns-11 dl, .ns-13 dl, .ns-15 dl, .ns-101 dl, .ns-103 dl, .ns-105 dl {
+border-top:solid 1px #DDDDDD;
+border-left:solid 1px #DDDDDD;
+padding-top:.5em;
+padding-left:.5em;
+margin-left:1em;
+}
+ 
+.ns-1 dl, .ns-3 dl, .ns-5 dl, .ns-7 dl, .ns-9 dl,
+.ns-11 dl, .ns-13 dl, .ns-15 dl, .ns-101 dl, .ns-103 dl, .ns-105 dl,
+ 
+.ns-1 dl dl dl, .ns-3 dl dl dl, .ns-5 dl dl dl, .ns-7 dl dl dl, .ns-9 dl dl dl,
+.ns-11 dl dl dl, .ns-13 dl dl dl, .ns-15 dl dl dl, .ns-101 dl dl dl, .ns-103 dl dl dl, .ns-105 dl dl dl,
+ 
+.ns-1 dl dl dl dl dl, .ns-3 dl dl dl dl dl, .ns-5 dl dl dl dl dl,
+.ns-7 dl dl dl dl dl, .ns-9 dl dl dl dl dl, .ns-11 dl dl dl dl dl,
+.ns-13 dl dl dl dl dl, .ns-15 dl dl dl dl dl, .ns-101 dl dl dl dl dl,
+.ns-103 dl dl dl dl dl, .ns-105 dl dl dl dl dl,
+ 
+.ns-1 dl dl dl dl dl dl dl, .ns-3 dl dl dl dl dl dl dl,
+.ns-5 dl dl dl dl dl dl dl, .ns-7 dl dl dl dl dl dl dl,
+.ns-9 dl dl dl dl dl dl dl, .ns-11 dl dl dl dl dl dl dl,
+.ns-13 dl dl dl dl dl dl dl, .ns-15 dl dl dl dl dl dl dl,
+.ns-101 dl dl dl dl dl dl dl, .ns-103 dl dl dl dl dl dl dl,
+.ns-105 dl dl dl dl dl dl dl,
+ 
+.ns-1 dl dl dl dl dl dl dl dl dl, .ns-3 dl dl dl dl dl dl dl dl dl,
+.ns-5 dl dl dl dl dl dl dl dl dl, .ns-7 dl dl dl dl dl dl dl dl dl,
+.ns-9 dl dl dl dl dl dl dl dl dl, .ns-11 dl dl dl dl dl dl dl dl dl,
+.ns-13 dl dl dl dl dl dl dl dl dl, .ns-15 dl dl dl dl dl dl dl dl dl,
+.ns-101 dl dl dl dl dl dl dl dl dl, .ns-103 dl dl dl dl dl dl dl dl dl,
+.ns-105 dl dl dl dl dl dl dl dl dl
+{ background:#F4F4F4 }
+ 
+.ns-1 dl dl, .ns-3 dl dl, .ns-5 dl dl, .ns-7 dl dl, .ns-9 dl dl,
+.ns-11 dl dl, .ns-13 dl dl, .ns-15 dl dl, .ns-101 dl dl, .ns-103 dl dl, .ns-105 dl dl,
+ 
+.ns-1 dl dl dl dl, .ns-3 dl dl dl dl, .ns-5 dl dl dl dl, .ns-7 dl dl dl dl,
+.ns-9 dl dl dl dl, .ns-11 dl dl dl dl, .ns-13 dl dl dl dl, .ns-15 dl dl dl dl,
+.ns-101 dl dl dl dl, .ns-103 dl dl dl dl, .ns-105 dl dl dl dl,
+ 
+.ns-1 dl dl dl dl dl dl, .ns-3 dl dl dl dl dl dl,
+.ns-5 dl dl dl dl dl dl, .ns-7 dl dl dl dl dl dl,
+.ns-9 dl dl dl dl dl dl, .ns-11 dl dl dl dl dl dl,
+.ns-13 dl dl dl dl dl dl, .ns-15 dl dl dl dl dl dl,
+.ns-101 dl dl dl dl dl dl, .ns-103 dl dl dl dl dl dl,
+.ns-105 dl dl dl dl dl dl,
+ 
+.ns-1 dl dl dl dl dl dl dl dl, .ns-3 dl dl dl dl dl dl dl dl,
+.ns-5 dl dl dl dl dl dl dl dl, .ns-7 dl dl dl dl dl dl dl dl,
+.ns-9 dl dl dl dl dl dl dl dl, .ns-11 dl dl dl dl dl dl dl dl,
+.ns-13 dl dl dl dl dl dl dl dl, .ns-15 dl dl dl dl dl dl dl dl,
+.ns-101 dl dl dl dl dl dl dl dl, .ns-103 dl dl dl dl dl dl dl dl,
+.ns-105 dl dl dl dl dl dl dl dl,
+ 
+.ns-1 dl dl dl dl dl dl dl dl dl dl, .ns-3 dl dl dl dl dl dl dl dl dl dl,
+.ns-5 dl dl dl dl dl dl dl dl dl dl, .ns-7 dl dl dl dl dl dl dl dl dl dl,
+.ns-9 dl dl dl dl dl dl dl dl dl dl, .ns-11 dl dl dl dl dl dl dl dl dl dl,
+.ns-13 dl dl dl dl dl dl dl dl dl dl, .ns-15 dl dl dl dl dl dl dl dl dl dl,
+.ns-101 dl dl dl dl dl dl dl dl dl dl, .ns-103 dl dl dl dl dl dl dl dl dl dl,
+.ns-105 dl dl dl dl dl dl dl dl dl dl
+{ background:#FFFFFF }
+
+/* Dùng để hiển thị tọa độ địa lý tại đầu trang, vị trí khác nhau tùy vào skin */
+#coordinates {  
+position: absolute;
+z-index: 1;
+border: none;
+background: none;
+right: 30px;
+top: 3.7em;
+float: right;
+margin: 0.0em;
+padding: 0.0em;
+line-height: 1.5em;
+text-align: right;
+text-indent: 0;
+font-size: 85%;
+text-transform: none;
+white-space: nowrap;
+}
+
+/*
+</pre>
+[[en:MediaWiki:Monobook.css]]
+*/

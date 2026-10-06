@@ -42,6 +42,7 @@ namespace Buoi8_FrmPhieuKhaoSat
             set
             {
                 this.tongSoGiay = value;
+                this.inDongHo();
             }
         }
 

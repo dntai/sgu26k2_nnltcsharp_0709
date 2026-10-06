@@ -1,0 +1,66 @@
+NV01
+Nguyễn An Bình
+1
+2
+1974
+1
+NV02
+Lê Thị Đoan Trang
+7
+0
+1975
+0
+NV03
+Nguyễn Hoài Nam
+0
+0
+1982
+1
+NV04
+Lý Bảo Ngọc Trân
+2
+0
+1984
+0
+NV05
+Ngô Kim Ngân
+4
+2
+1969
+0
+NV06
+Trần Phương Nam
+1
+2
+1960
+1
+NV07
+Trần Lê Phương Linh
+2
+0
+1989
+0
+NV08
+Mai Phương Thúy An
+5
+0
+1984
+0
+NV09
+Hoàng Anh Dũng
+5
+0
+1978
+1
+NV10
+Lý Hào Kiệt
+5
+0
+1988
+1
+NV11
+Nguyễn Thi Thanh Tuyền
+2
+0
+1980
+0

@@ -7,6 +7,12 @@
     <Compile Update="FrmTest.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmTestDeThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmTestDongHo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UcCauHoi.cs">
       <SubType>UserControl</SubType>
     </Compile>

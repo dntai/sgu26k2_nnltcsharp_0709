@@ -1,0 +1,5 @@
+﻿Bài này sử dụng 2 Treeview, một Split Panel
+2 Treeview cho AllowDrop = True
+Chọn vào các tình huống FirstTree_MouseDown và SecondTree_MouseDown, sau đó chỉnh lại là tree_MouseDown để dùng chung (nhớ chỉnh lại tại vùng Delegate của 2 điều khiển này).
+Tương tự tạo thêm 2 tình huống tree_DragOver và tree_DragDrop
+2 tình huống KeyDown thì tạo riêng cho từng Treeview.

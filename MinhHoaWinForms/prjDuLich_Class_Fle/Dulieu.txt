@@ -1,0 +1,24 @@
+HU001
+Nguyễn An Bình
+1
+2
+1
+1
+DL001
+Trường Cao đẳng Kỹ thuật Lý Tự Trọng
+0
+40
+0
+0
+DL002
+Hoàng Minh Khang
+1
+2
+0
+0
+HL001
+Cty TNHH Trí Dũng
+0
+20
+2
+1

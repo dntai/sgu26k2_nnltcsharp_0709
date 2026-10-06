@@ -1,0 +1,24 @@
+/* Đây là bảng kiểu CSS được áp dụng vào bản để in ra của các skin. */
+
+/**
+ * Không in ra các URL đầy đủ trong lời chú thích
+ * Nên viết ra các URL rõ ràng để tránh sự nhầm lẫn
+ */
+
+#content cite a.external.text:after,
+.navbox, .infobox.sisterproject {
+    display: none;
+}
+
+/* Không in ra các hộp thông báo trong bài */
+
+.ns-0 .ambox {
+    display: none;
+}
+
+/* Không in ra các liên kết chỉ có ích trên máy tính */
+
+#privacy, #about, #disclaimer,
+.editlink, .noprint, .metadata, .dablink {
+    display: none
+}

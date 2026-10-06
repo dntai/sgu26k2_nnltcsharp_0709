@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiemThi_Class_File", "DiemThi_Class_File\DiemThi_Class_File.csproj", "{27558563-5128-438E-A889-4DDBC43C1FDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27558563-5128-438E-A889-4DDBC43C1FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27558563-5128-438E-A889-4DDBC43C1FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27558563-5128-438E-A889-4DDBC43C1FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27558563-5128-438E-A889-4DDBC43C1FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

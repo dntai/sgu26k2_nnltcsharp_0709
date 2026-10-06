@@ -1,0 +1,940 @@
+/* <pre><nowiki> */
+
+/* CSS dùng chung cho các skin */
+
+/* Không hiện tab "xóa" tại Trang Chính */
+
+body.page-Trang_Chính #ca-delete {
+display: none !important;
+}
+
+/* Lớp wikitable/prettytable để trang trí bảng trường */
+
+table.wikitable,
+table.prettytable {
+  margin: 1em 1em 1em 0px;
+  background: #f9f9f9;
+  border: 1px #aaaaaa solid;
+  border-collapse: collapse;
+}
+
+table.wikitable th, table.wikitable td,
+table.prettytable th, table.prettytable td {
+  border: 1px #aaaaaa solid;
+  padding: 0.2em;
+}
+
+table.wikitable th,
+table.prettytable th {
+  background: #f2f2f2;
+  text-align: center;
+}
+
+table.wikitable caption,
+table.prettytable caption {
+  margin-left: inherit;
+  margin-right: inherit;
+}
+
+/* Kiểu cho các tiêu bản Infobox */
+
+.infobox {
+   border: 1px solid #aaa;
+   background-color: #f9f9f9;
+   color: black;
+   margin-bottom: 0.5em;
+   margin-left: 1em;
+   padding: 0.2em;
+   float: right;
+   clear: right;
+}
+.infobox td,
+.infobox th {
+   vertical-align: top;
+}
+.infobox caption {
+   font-size: larger;
+   margin-left: inherit;
+}
+.infobox.bordered {
+   border-collapse: collapse;
+}
+.infobox.bordered td,
+.infobox.bordered th {
+   border: 1px solid #aaa;
+}
+.infobox.bordered .borderless td,
+.infobox.bordered .borderless th {
+   border: 0;
+}
+
+.infobox.sisterproject {
+   width: 20em;
+   font-size: 90%;
+}
+
+@media print {
+    .infobox.sisterproject {
+        display: none;
+    }
+}
+
+/* Kiểu cho các infobox có viền và các hàng được nhập với nhau */
+.infobox.bordered .mergedtoprow td,
+.infobox.bordered .mergedtoprow th {
+   border: 0;
+   border-top: 1px solid #aaa;
+   border-right: 1px solid #aaa;
+}
+
+.infobox.bordered .mergedrow td,
+.infobox.bordered .mergedrow th {
+   border: 0;
+   border-right: 1px solid #aaa;
+}
+
+
+/* Kiểu cho các infobox địa lý, v.d. quốc gia, các đơn vị hành chính. */
+
+.infobox.geography {
+   text-align: left;
+   border-collapse: collapse;
+   line-height: 1.2em; 
+   font-size: 90%;
+}
+
+.infobox.geography  td,
+.infobox.geography  th {
+   border-top: solid 1px #aaa;
+   padding: 0.4em 0.6em 0.4em 0.6em;
+}
+.infobox.geography .mergedtoprow td,
+.infobox.geography .mergedtoprow th {
+   border-top: solid 1px #aaa;
+   padding: 0.4em 0.6em 0.2em 0.6em;
+}
+
+.infobox.geography .mergedrow td,
+.infobox.geography .mergedrow th {
+      border: 0;
+      padding: 0 0.6em 0.2em 0.6em;
+}
+
+.infobox.geography .mergedbottomrow td,
+.infobox.geography .mergedbottomrow th {
+   border-top: 0;
+   border-bottom: solid 1px #aaa;
+   padding: 0 0.6em 0.4em 0.6em;
+}
+
+.infobox.geography .maptable td,
+.infobox.geography .maptable th {
+      border: 0;
+      padding: 0;
+}
+
+
+/* Dành cho tài liệu tiêu bản */
+.template-documentation {
+clear: both;
+margin: 1em 0 0 0;
+border: 1px solid #aaa; 
+background-color: #ecfcf4; 
+padding: 5px;
+}
+ 
+.thumbinner {
+min-width: 100px;
+}
+
+/* Icon cho các bài chọn lọc, bài chất lượng tốt */
+
+li.FA {
+  list-style-image: url("http://upload.wikimedia.org/wikipedia/commons/4/4c/Icone_AdQ.png");
+}
+ 
+li.GA {
+  list-style-image: url("http://upload.wikimedia.org/wikipedia/fr/8/86/Icone_BA.png");
+}
+
+/* skin mặc định cho các hộp navigation */
+table.navbox {            /* navbox container style */
+  border:1px solid #aaa;
+  width:100%; 
+  margin:auto;
+  clear:both;
+  font-size:88%;
+  text-align:center;
+  padding:1px;
+}
+table.navbox + table.navbox {
+  margin-top:-1px;        /* single pixel border between adjacent navboxes (doesn't work for IE6, but that's okay) */
+}
+.navbox-title, .navbox-abovebelow, table.navbox th {
+  text-align:center;      /* title and above/below styles */
+  padding-left:1em;
+  padding-right:1em;
+}
+.navbox-group {           /* group style */
+  white-space:nowrap;
+  text-align:right;
+  font-weight:bold;
+  padding-left:1em;
+  padding-right:1em;
+}
+.navbox, .navbox-subgroup {
+  background:#fdfdfd;     /* Background color */
+}
+.navbox-list {
+  border-color:#fdfdfd;   /* Must match background color */
+}
+.navbox-title, table.navbox th {
+  background:#ccccff;     /* Level 1 color */
+}
+.navbox-abovebelow, .navbox-group, .navbox-subgroup .navbox-title {
+  background:#ddddff;     /* Level 2 color */
+}
+.navbox-subgroup .navbox-group, .navbox-subgroup .navbox-abovebelow {
+  background:#e6e6ff;     /* Level 3 color */
+}
+.navbox-even {
+  background:#f7f7f7;     /* Even row striping */
+}
+.navbox-odd {
+  background:transparent; /* Odd row striping */
+}
+ 
+@media print {
+    .navbox {
+        display: none;
+    }
+}
+
+/* Navigationsleisten chuẩn, lấy từ .de., để dấu các thông tin trong hộp  Chi tiết tại [[:en:Wikipedia:NavFrame]]. */
+ 
+div.Boxmerge,
+div.NavFrame {
+        margin: 0px;
+        padding: 4px;
+        border: 1px solid #aaa;
+        text-align: center;
+        border-collapse: collapse;
+        font-size: 95%;
+}
+div.Boxmerge div.NavFrame {
+        border-style: none;
+        border-style: hidden;
+}
+div.NavFrame + div.NavFrame {
+        border-top-style: none;
+        border-top-style: hidden;
+}
+div.NavPic {
+        background-color: #fff;
+        margin: 0px;
+        padding: 2px;
+        float: left;
+}
+div.NavFrame div.NavHead {
+        height: 1.6em;
+        font-weight: bold;
+        background-color: #ccf;
+        position:relative;
+}
+div.NavFrame p {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent {
+        font-size: 100%;
+}
+div.NavFrame div.NavContent p {
+        font-size: 100%;
+}
+div.NavEnd {
+        margin: 0px;
+        padding: 0px;
+        line-height: 1px;
+        clear: both;
+}
+a.NavToggle {
+        position:absolute;
+        top:0px;
+        right:3px;
+        font-weight:normal;
+        font-size:smaller;
+}
+ 
+/* Kiểu cách cho các "hộp thông báo" */
+.notice {
+    clear: both;
+    text-align: justify;
+    margin: 1em 0.5em;
+    padding: 0.5em;
+}
+
+.meta-notice {
+    border-top: 3px double #cccccc;
+    border-bottom: 3px double #cccccc;
+}
+
+.meta-notice-icon {
+    background: url('/favicon.ico') center left no-repeat;
+    padding-left: 24px;
+}
+
+#disambig {
+    background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Disambig.svg/32px-Disambig.svg.png') center left no-repeat;
+    padding-left: 40px;
+}
+
+#stub, #substub, #dich {
+    background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Baustelle.svg/32px-Baustelle.svg.png') center left no-repeat;
+    padding-left: 40px;
+}
+
+#pd {
+    background: url('http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/PD-icon.svg/32px-PD-icon.svg.png') center left no-repeat;
+    padding-left: 40px;
+}
+
+/* #spoiler {
+    border-top: 2px solid #ddd;
+    border-bottom:2px solid #ddd;
+} */
+
+/* Đoạn âm thanh có cách phát âm */
+.audiolink a{
+    background: url("http://upload.wikimedia.org/wikipedia/commons/f/f7/Loudspeaker.png") center left no-repeat !important;
+    padding-left: 16px !important;
+    padding-right: 0 !important;
+}
+
+/* Kiểu cách chuẩn cho các tiêu bản ở trang thảo luận */
+
+.Talk-Notice  {
+    border: 1px solid #C0C090;
+    background-color: #F8EABA;
+    margin-bottom: 3px;
+    width: 85%;
+    border-spacing: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Siêu dữ liệu */
+table.metadata {
+    border: 1px solid #aaaaaa;
+    display: none;
+    speak: none;
+}
+.metadata-label {
+    color: #aaaaaa;
+    white-space: nowrap;
+}
+
+/* Viết các trang đổi hướng bằng chữ xiên ở </nowiki>[[Đặc biệt:Allpages]]<nowiki> */
+.allpagesredirect {
+    font-style: italic
+}
+
+/* Hiển thị nền tiêu bản đúng kiểu trong các trình duyệt */
+.Talk-Notice td {
+    background: inherit;
+}
+
+/* Kiểu cách cho các danh sách phương tiện [[Tiêu bản:Nghe]],
+   [[Tiêu bản:Multi-listen start]], [[Tiêu bản:Video]], và
+   [[Tiêu bản:Multi-video start]] */
+
+div.listenlist {
+    background: url("http://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Gnome-speakernotes.png/30px-Gnome-speakernotes.png");
+    padding-left: 40px;
+}
+
+div.videolist, div.multivideolist {
+    background: url("http://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/FilmRoll-small.png/40px-FilmRoll-small.png");
+    padding-left: 50px;
+}
+
+/* Kiểu cách cho các danh sách phương tiện */
+
+div.medialist {
+    min-height: 50px;
+    margin: 1em;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+div.medialist ul {
+    list-style-type: none; 
+    list-style-image: none;
+    margin: 0;
+}
+
+div.medialist ul li {
+    padding-bottom: 0.5em;
+}
+
+div.medialist ul li li {
+    font-size: 91%;
+    padding-bottom: 0;
+}
+
+/*
+  Add formatting to make sure that "external references" from [[Template:Ref]] do
+  not get URL expansion, not even when printed. The mechanism up to MediaWiki 1.4 was
+  that the HTML code contained a SPAN following the anchor A; this SPAN had the class
+  "urlexpansion", which was not displayed on screen, but was shown when the medium was
+  "print". The rules below ensure (a) that there is no extra padding to the right of
+  the anchor (displayed as "[<number>]"), (b) that there is no "external link arrow" for
+  the link, and (c) that this SPAN of class "urlexpansion" is never shown.
+  ~~~~
+*/
+
+.plainlinksneverexpand {
+  background: none ! important;
+  padding: 0 ! important;
+}
+
+.plainlinksneverexpand .urlexpansion {
+  display : none ! important;
+}
+
+/* Make sure that ext links displayed within "plainlinksneverexpand" don't get
+   the arrow...
+*/
+.plainlinksneverexpand a {
+   background: none !important;
+   padding: 0 !important
+}
+
+/* With MediaWiki 1.5, the mechanism has changed: instead of a SPAN of class "urlexpansion"
+   following the anchor A, the anchor itself now has class "external autonumber" and the
+   expansion is inserted when printing (see the common printing style sheet at
+   http://en.wikipedia.org/skins-1.5/common/commonPrint.css) using the ":after" pseudo-
+   element of CSS. We have to switch this off for links due to Template:Ref!
+   ~~~~
+*/
+.plainlinksneverexpand a.external.text:after,
+.plainlinksneverexpand a.external.autonumber:after {
+    display: none !important;
+}
+
+/* Kiểu cách cho tiêu bản hợp nhất */
+
+.messagebox {
+   border: 1px solid #aaaaaa;
+   background-color: #f9f9f9;
+   width: 85%;
+   margin: 0 auto 1em auto;
+   padding: .2em;
+   text-align: justify;
+}
+.messagebox.merge {
+   border: 1px solid #cf9fff;
+   background-color: #f5edf5;
+   text-align: center;
+}
+.messagebox.cleanup {
+   border: 1px solid #9f9fff;
+   background-color: #efefff;
+   text-align: center;
+}
+.messagebox.standard-talk {
+   border: 1px solid #c0c090;
+   background-color: #f8eaba;
+}
+
+.infobox {
+   border: 1px solid #aaaaaa;
+   background-color: #f9f9f9;
+   margin-bottom: 0.5em;
+   margin-left: 1em; 
+   padding: .2em;
+   float: right;
+   clear: right;
+}
+.infobox td,
+.infobox th {
+   vertical-align: top;
+}
+.infobox caption {
+   font-size: larger;
+   margin-left: inherit;
+}
+.infobox.bordered {
+   border-collapse: collapse;
+}
+.infobox.bordered td, .infobox.bordered th {
+   border: 1px solid #aaaaaa;
+}
+.infobox.sisterproject {
+   width: 22em;
+}
+
+/* Bộ lọc hình ảnh (thí dụ trên [[Trang Chính]] dùng bảng định kiểu
+   cách */
+*.filter-images img {
+   display: none !important;
+}
+*.filter-images *.show-image img {
+   display: block !important;
+}
+
+/* Bộ lọc liên kết bên ngoài (thí dụ trên [[Trang Chính]] dùng bảng định
+   kiểu cách */
+*.filter-links a.external, *.filter-links span.urlexpansion {
+   display: none !important;
+}
+*.filter-links *.show-link a.external {
+   display: inline !important;
+}
+
+/* Hỗ trợ [[Tiêu bản:IPA]], [[Tiêu bản:Unicode]], và
+   [[Tiêu bản:Polytonic]]. The inherit declaration resets the font for all
+   browsers except MSIE6.  The empty comment must remain. */
+.IPA {
+        font-family: "Chrysanthi Unicode", "Doulos SIL", Gentium, GentiumAlt, Code2000, "TITUS Cyberbit Basic", "DejaVu Sans", "Bitstream Cyberbit", "Arial Unicode MS", "Lucida Sans Unicode", "Hiragino Kaku Gothic Pro", "Matrix Unicode";
+        font-family /**/:inherit;
+}
+.Unicode {
+        font-family: "TITUS Cyberbit Basic", Code2000, "Doulos SIL", "Chrysanthi Unicode", "Bitstream Cyberbit", "Bitstream CyberBase", Thryomanes, Gentium, GentiumAlt, "Visual Geez Unicode", "Lucida Grande", "Arial Unicode MS", "Microsoft Sans Serif", "Lucida Sans Unicode";
+        font-family /**/:inherit;
+}
+.polytonic {
+        font-family: Athena, Gentium, "Palatino Linotype", "Arial Unicode MS", "Lucida Sans Unicode", "Lucida Grande", Code2000; 
+        font-family /**/:inherit;
+}
+
+/* Dấu cấu trúc đựng tham số không định */
+.hiddenStructure {
+   display: none;
+   speak: none;
+}
+
+/* Dời đường vạch dưới liên kết */
+.nounderlines a { 
+  text-decoration: none;
+}
+
+/* [[Tiêu bản:Hình tượng]] */
+*.icon-box {
+        position: relative; overflow: hidden; z-index: 2;
+}
+*.icon-box *.icon-link {
+        position: absolute; top: 0px; left: 0px; z-index: 3;
+}
+*.icon-box *.icon-link a, *.icon-box *.icon-link a:hover {
+        text-decoration: none;
+}
+*.icon-box *.icon-link span {
+        float: left; cursor: hand;
+}
+
+/* Nền "bàn cờ" đằng sau những hình có vùng trong suốt vào các trang miêu tả hình */
+body.ns-6 #file img, body.ns-6 .gallerybox .thumb img {
+    background: url("http://upload.wikimedia.org/wikipedia/commons/5/5d/Checker-16x16.png") repeat;
+}
+
+/* Chữ xiên trong văn bản in xiên */
+i i, i em, i cite,
+em i, em em , em cite,
+cite i, cite em, cite cite {
+    font-style: normal;
+}
+
+/* Đổi cỡ hộp sửa đổi */
+/* Đây là mã CSS3 - chỉ hoạt động trong Safari hiện nay */
+
+textarea#wpTextbox1 {
+    resize: both;
+}
+
+/* Dời các liên kết không cần khi in ra trang */
+@media print {
+    #privacy, #about, #disclaimer {display:none;}
+}
+
+/* Số chữ được thêm hay dời */
+.mw-plusminus-pos {
+    color: darkgreen;
+}
+
+.mw-plusminus-neg {
+    color: darkred;
+}
+
+/* Change the external link icon to an Adobe icon for all PDF files */
+/* (in browsers that support these CSS selectors, like Mozilla and Opera) */
+#bodyContent a[href$=".pdf"].external, 
+#bodyContent a[href*=".pdf?"].external, 
+#bodyContent a[href*=".pdf#"].external,
+#bodyContent a[href$=".PDF"].external, 
+#bodyContent a[href*=".PDF?"].external, 
+#bodyContent a[href*=".PDF#"].external {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat;
+    padding-right: 16px;
+}
+
+/* Change the external link icon to an Adobe icon anywhere the PDFlink class */
+/* is used (notably en:Template:PDFlink). This works in IE, unlike the above. */
+span.PDFlink a {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Icons-mini-file_acrobat.gif/15px-Icons-mini-file_acrobat.gif) center right no-repeat !important;
+    padding-right: 17px !important;
+}
+
+/* [[Tiêu bản:Chính]], [[Tiêu bản:Bài chính thể loại]] */
+.section-detail, div.catmore {
+    background: url("http://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Searchtool-80%25.png/15px-Searchtool-80%25.png") top left no-repeat;
+    padding-left: 20px;
+    min-height: 15px;
+}
+
+/* [[Tiêu bản:Dablink]], [[Tiêu bản:Otheruses]], v.v. */
+div.dablink {
+    background: url("http://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Disambig.svg/15px-Disambig.svg.png") center left no-repeat;
+    font-style: italic;
+    margin-left: 2em;
+    padding-left: 20px;
+    min-height: 12px;
+}
+
+/* [[Tiêu bản:Bài chính thể loại]] */
+div.catmore {
+    margin-left: 2em;
+}
+
+/* Hình inline */
+*.force-inline div, *.force-inline img {
+    position: static !important;
+    display: inline !important;
+}
+
+/* Kiểu cho các khung thông báo cấm thành viên */
+div.user-block {
+padding: 5px;
+border: 1px solid #A9A9A9;
+background-color: #FFEFD5;
+}
+
+/* Kích thước khung cho các hộp thông báo ambox/tmbox/imbox/cmbox/ombox/fmbox/dmbox */
+th.mbox-text, td.mbox-text {     /* The message body cell(s) */
+    border: none; 
+    padding: 0.25em 0.9em;       /* 0.9em left/right */
+    width: 100%;    /* Make all mboxes the same width regardless of text length */
+}
+td.mbox-image {                  /* The left image cell */
+    border: none; 
+    padding: 2px 0 2px 0.9em;    /* 0.9em left, 0px right */
+    text-align: center; 
+}
+td.mbox-imageright {             /* The right image cell */
+    border: none;
+    padding: 2px 0.9em 2px 0;    /* 0px left, 0.9em right */
+    text-align: center; 
+}
+.mediawiki table.tmbox-small,
+.mediawiki table.ombox-small,
+.mediawiki table.mbox-small {    /* For the "small=yes" option (also used elsewhere).   */
+    clear: right;                /* The "mediawiki" class ensures that this declaration */
+    float: right;                /* overrides styles set in "tmbox"/"ombox"/etc below   */
+    margin: 4px 0 4px 1em;
+    width: 238px;
+    font-size: 88%;
+    line-height: 1.25em;
+}
+
+/* Kiểu cho hộp thông báo tại bài viết */
+table.ambox {            /* 10% = Will not overlap with other elements */
+    margin: -1px 10% 0px;    /* -1px = Single border between stacked boxes in all browsers */
+    border: 1px solid #aaa; 
+    border-left: 10px solid #1e90ff;    /* Default "notice" blue */
+    background: #fbfbfb; 
+}
+.ambox th.mbox-text, 
+.ambox td.mbox-text {            /* The message body cell(s) */
+    padding: 0.25em 0.5em;       /* 0.5em left/right */
+}
+.ambox td.mbox-image {           /* The left image cell */
+    padding: 2px 0 2px 0.5em;    /* 0.5em left, 0px right */
+}
+.ambox td.mbox-imageright {      /* The right image cell */
+    padding: 2px 0.5em 2px 0;    /* 0px left, 0.5em right */
+}
+
+table.ambox-notice {
+    border-left: 10px solid #1e90ff;    /* Blue */
+}
+table.ambox-speedy {
+    border-left: 10px solid #b22222;    /* Red */
+    background: #fee;                   /* Pink */
+}
+table.ambox-delete {
+    border-left: 10px solid #b22222;    /* Red */
+}
+table.ambox-content {
+    border-left: 10px solid #f28500;    /* Orange */
+}
+table.ambox-style {
+    border-left: 10px solid #f4c430;    /* Yellow */
+}
+table.ambox-move {
+    border-left: 10px solid #9932cc;    /* Purple */
+}
+table.ambox-protection {
+    border-left: 10px solid #bba;       /* Gray-gold */
+}
+
+/* Kiểu cho hộp thông báo tại hình */
+table.imbox {
+    margin: 4px 10%; 
+    border-collapse: collapse; 
+    border: 3px solid #1e90ff;    /* Default "notice" blue */
+    background: #fbfbfb;
+}
+.imbox .mbox-text .imbox {    /* For imboxes inside imbox-text cells. */
+    margin: 0 -0.5em;    /* 0.9 - 0.5 = 0.4em left/right. */
+}
+.mbox-inside .imbox {    /* For imboxes inside other templates. */
+    margin: 4px;
+}
+
+table.imbox-notice {
+    border: 3px solid #1e90ff;    /* Blue */
+}
+table.imbox-speedy {
+    border: 3px solid #b22222;    /* Red */
+    background: #fee;             /* Pink */
+}
+table.imbox-delete {
+    border: 3px solid #b22222;    /* Red */
+}
+table.imbox-content {
+    border: 3px solid #f28500;    /* Orange */
+}
+table.imbox-style {
+    border: 3px solid #f4c430;    /* Yellow */
+}
+table.imbox-move {
+    border: 3px solid #9932cc;    /* Purple */
+}
+table.imbox-protection {
+    border: 3px solid #bba;       /* Gray-gold */
+}
+table.imbox-license {
+    border: 3px solid #88a;       /* Dark gray */
+    background: #f7f8ff;          /* Light gray */
+}
+table.imbox-featured {
+    border: 3px solid #cba135;    /* Brown-gold */
+}
+
+/* Kiểu cho hộp thông báo tại thể loại */
+table.cmbox {
+    margin: 3px 10%;
+    border-collapse: collapse;
+    border: 1px solid #aaa; 
+    background: #DFE8FF;    /* Default "notice" blue */
+}
+
+table.cmbox-notice {
+    background: #D8E8FF;    /* Blue */
+}
+table.cmbox-speedy {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 4px solid #b22222;    /* Red */
+    background: #FFDBDB;          /* Pink */
+}
+table.cmbox-delete {
+    background: #FFDBDB;    /* Red */
+}
+table.cmbox-content {
+    background: #FFE7CE;    /* Orange */
+}
+table.cmbox-style {
+    background: #FFF9DB;    /* Yellow */
+}
+table.cmbox-move {
+    background: #E4D8FF;    /* Purple */
+}
+table.cmbox-protection {
+    background: #EFEFE1;    /* Gray-gold */
+}
+
+/* Kiểu cho họp thông báo ở các trang khác */
+table.ombox {
+    margin: 4px 10%; 
+    border-collapse: collapse; 
+    border: 1px solid #aaa;       /* Default "notice" gray */
+    background: #f9f9f9;
+}
+
+table.ombox-notice {
+    border: 1px solid #aaa;       /* Gray */
+}
+table.ombox-speedy {
+    border: 2px solid #b22222;    /* Red */
+    background: #fee;             /* Pink */
+}
+table.ombox-delete {
+    border: 2px solid #b22222;    /* Red */
+}
+table.ombox-content {
+    border: 1px solid #f28500;    /* Orange */
+}
+table.ombox-style {
+    border: 1px solid #f4c430;    /* Yellow */
+}
+table.ombox-move {
+    border: 1px solid #9932cc;    /* Purple */
+}
+table.ombox-protection {
+    border: 2px solid #bba;       /* Gray-gold */
+}
+ 
+/* Kiểu cho hộp thông báo ở trang thảo luận */
+table.tmbox {
+    margin: 4px 10%;
+    border-collapse: collapse;
+    border: 1px solid #c0c090;    /* Default "notice" gray-brown */
+    background: #f8eaba;
+}
+.mbox-inside .tmbox {    /* For tmboxes inside other templates. */
+    margin: 2px 0;
+    width: 100%;    /* Fix for Safari and Opera. */
+}
+
+table.tmbox-speedy {
+    border: 2px solid #b22222;    /* Red */
+    background: #fee;             /* Pink */
+}
+table.tmbox-delete {
+    border: 2px solid #b22222;    /* Red */
+}
+table.tmbox-content {
+    border: 2px solid #f28500;    /* Orange */
+}
+table.tmbox-style {
+    border: 2px solid #f4c430;    /* Yellow */
+}
+table.tmbox-move {
+    border: 2px solid #9932cc;    /* Purple */
+}
+table.tmbox-protection,
+table.tmbox-notice {
+    border: 1px solid #c0c090;    /* Gray-brown */
+}
+
+/* Kiểu cảnh báo fmbox màu hồng dành cho div dựa trên các cảnh báo. */
+div.fmbox-warning,
+div.mw-warning-with-logexcerpt {
+    clear: both;
+    margin: 0.2em 0;
+    border: 1px solid #BB7070;
+    background: #FFDBDB;
+    padding: 0.25em 0.9em;
+}
+
+/* làm cho danh sách các tham khảo nhỏ hơn */
+ol.references {
+    font-size: 100%;
+}
+
+.references-small { font-size: 90%;}
+
+/* CHÚ Ý PHÊ CHUẨN: những mã sau hiển thị đúng, nhưng phê chuẩn W3C không chấp nhận nó */
+/* -moz-* là một phần mở rộng tùy theo nhà cung cấp (CSS 2.1 4.1.2.1) */
+/* column-count lấy từ gói CSS3 "CSS Multi-column Layout" */
+/* Xin hãy bỏ qua các lỗi phê chuẩn tạo ra bởi hai dòng này */
+.references-2column {
+    font-size: 90%;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+
+.same-bg { background: none; }
+
+/* Tô sáng tham khảo được nhấn để dễ tìm */
+ol.references > li:target {
+    background-color: #DEF;
+}
+
+sup.reference:target { 
+    background-color: #DEF;
+}
+
+/* Kiểu cho chú thích */
+cite {
+    font-style: normal;
+    word-wrap: break-word;
+}
+
+/* Nếu có một tham khảo bên trong đến một tham khảo đầy đủ, tham khảo đầy đủ sẽ được tô sáng nếu tham khảo bên trong được nhấn */
+cite:target { 
+    background-color: #DEF;
+}
+
+/* Đừng mở rộng URL trong ghi chú khi in. URL nên được thêm ở ngoài, để tránh nhầm lẫn */
+
+@media print {
+    #content cite a.external.text:after {
+        display: none;
+    }
+}
+
+/* Đối với số chú thích và mã số tài liệu có liên kết, số không cần hiện trên màn hình hay máy cầm tay, nhưng nên hiện trong bản in */
+
+@media screen, handheld, projection {
+    cite *.printonly {
+        display: none;
+    }
+}
+
+
+/* Tọa độ địa lý
+
+Để hiển thị tọa độ địa lý dùng cách ghi chú trong mã nguồn, hãy thêm dòng sau vào trang Thành viên:Tênthànhviên/monobook.css:
+   .geo-default { display: inline } .geo-nondefault { display: none } 
+   .geo-dec { display: inline } .geo-dms { display: inline }
+
+Để hiển thị tọa độ địa lý dùng cách ghi chú thập phân, hãy thêm dòng sau vào trang Thành viên:Tênthànhviên/monobook.css:
+   .geo-default { display: inline } .geo-nondefault { display: inline } 
+   .geo-dec { display: inline } .geo-dms { display: none }
+
+Để hiển thị tọa độ địa lý dùng cách ghi chú kiểu DMS, hãy thêm dòng sau vào trang Thành viên:Tênthànhviên/monobook.css:
+   .geo-default { display: inline } .geo-nondefault { display: inline } 
+   .geo-dec { display: none }   .geo-dms { display: inline }
+
+Để hiển thị tọa độ địa lý dùng cách ghi chú kiểu DMS lẫn thập phân, hãy thêm dòng sau vào trang Thành viên:Tênthànhviên/monobook.css:
+   .geo-default { display: inline } .geo-nondefault { display: inline } 
+   .geo-dec { display: inline }   .geo-dms { display: inline }
+   .geo-multi-punct { display: inline }
+
+Xem [[Tiêu bản:Coor link]] để xem cách dùng.
+
+Lưu ý các lớp "geo", "longitude", và "latitude" không chỉ là các kiểu cách trình bày mà còn được [[vi định dạng Geo]] sử dụng, do đó không nên đổi tên.
+
+*/
+
+.geo-default { display: inline; }
+.geo-nondefault { display: none; }
+.geo-dms { display: inline; }
+.geo-dec { display: inline; }
+.geo-multi-punct { display: none; }
+
+.longitude, .latitude {
+    white-space: nowrap;
+}
+
+/* Dùng cho vi định dạng Geo (Geo microformat), hiện chưa cần kiểu nào ngoại trừ .geo-dec. */
+.geo { }
+
+/***** hết các kiểu cách cho tọa độ địa lý */
+
+/*
+[[en:MediaWiki:Common.css]]
+*/
+
+/* </nowiki></pre> */
