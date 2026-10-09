@@ -1,5 +1,5 @@
 ﻿Định nghĩa nào sau đây là đúng cho .NET Framework?
-4 2
+4 2 3
 Môi trường để phát triển, xây dựng, triển khai và thực thi chỉ ứng dụng phân tán
 Môi trường để phát triển, xây dựng, triển khai và thực thi các ứng dụng Desktop, Web và các dịch vụ Web
 Môi trường để phát triển, xây dựng, triển khai và thực thi các dịch vụ Web
