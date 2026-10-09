@@ -72,15 +72,18 @@ namespace ThucDonAnNhau_Class_ListBox
             if(lstThucDon.SelectedIndex != -1)
             {
                 fr = new frmSoLuong();
-                fr.ShowDialog();
-                lblSoLuong.Text = fr.Controls["txtSoLuong"].Text == "" || fr.Controls["txtSoLuong"].Text == "0" ? "1" : fr.Controls["txtSoLuong"].Text;
-                Mon = (ClassMonAn) (lstThucDon.Items[lstThucDon.SelectedIndex]);
-                lblDonGia.Text = Mon.DonGia.ToString("#,##0");
-                Mon.SoLuong = int.Parse(lblSoLuong.Text);
-                TongCong += (Mon.DonGia * Mon.SoLuong);
-                lblTongCong.Text = TongCong.ToString("#,##0");
-                lstMonChon.Items.Add(Mon);
-                lstThucDon.Items.RemoveAt(lstThucDon.SelectedIndex);
+                DialogResult ret = fr.ShowDialog();
+                if (ret == DialogResult.OK)
+                {
+                    lblSoLuong.Text = fr.SoLuong.ToString();
+                    Mon = (ClassMonAn)(lstThucDon.Items[lstThucDon.SelectedIndex]);
+                    lblDonGia.Text = Mon.DonGia.ToString("#,##0");
+                    Mon.SoLuong = int.Parse(lblSoLuong.Text);
+                    TongCong += (Mon.DonGia * Mon.SoLuong);
+                    lblTongCong.Text = TongCong.ToString("#,##0");
+                    lstMonChon.Items.Add(Mon);
+                    lstThucDon.Items.RemoveAt(lstThucDon.SelectedIndex);
+                }
             }
         }
 

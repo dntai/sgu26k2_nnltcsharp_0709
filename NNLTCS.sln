@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThucDonAnNhau_Class_ListBox
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Combo_Class_ArrayList", "Tuan05\Combo_Class_ArrayList\Combo_Class_ArrayList.csproj", "{BC585C84-A9C8-44A3-BC68-4C9202BCB4C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prj_Calendar", "Tuan05\prj_Calendar\prj_Calendar.csproj", "{3C127C77-438E-41F2-AD41-C2AE11429A3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{BC585C84-A9C8-44A3-BC68-4C9202BCB4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC585C84-A9C8-44A3-BC68-4C9202BCB4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC585C84-A9C8-44A3-BC68-4C9202BCB4C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C127C77-438E-41F2-AD41-C2AE11429A3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C127C77-438E-41F2-AD41-C2AE11429A3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C127C77-438E-41F2-AD41-C2AE11429A3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C127C77-438E-41F2-AD41-C2AE11429A3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,5 +135,6 @@ Global
 		{FF0EA821-711D-4778-AE2E-D8D308E216F1} = {D3E09E10-F8D5-4505-80B5-C2E724C85686}
 		{DD0887E1-73BA-4E29-B0A1-0AC9BEE65ABA} = {D3E09E10-F8D5-4505-80B5-C2E724C85686}
 		{BC585C84-A9C8-44A3-BC68-4C9202BCB4C4} = {D3E09E10-F8D5-4505-80B5-C2E724C85686}
+		{3C127C77-438E-41F2-AD41-C2AE11429A3D} = {D3E09E10-F8D5-4505-80B5-C2E724C85686}
 	EndGlobalSection
 EndGlobal

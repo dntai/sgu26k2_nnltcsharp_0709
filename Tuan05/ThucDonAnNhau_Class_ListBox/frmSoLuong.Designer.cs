@@ -28,61 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.btnXong = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new Label();
+            txtSoLuong = new TextBox();
+            btnXong = new Button();
+            btnHuy = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số lượng đĩa:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(49, 94);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(104, 17);
+            label1.TabIndex = 0;
+            label1.Text = "Số lượng đĩa:";
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(129, 58);
-            this.txtSoLuong.MaxLength = 1;
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(62, 20);
-            this.txtSoLuong.TabIndex = 1;
-            this.txtSoLuong.Text = "1";
-            this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSLgDia_KeyPress);
+            txtSoLuong.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtSoLuong.Location = new Point(172, 89);
+            txtSoLuong.Margin = new Padding(4, 5, 4, 5);
+            txtSoLuong.MaxLength = 1;
+            txtSoLuong.Name = "txtSoLuong";
+            txtSoLuong.Size = new Size(81, 23);
+            txtSoLuong.TabIndex = 1;
+            txtSoLuong.Text = "1";
+            txtSoLuong.TextAlign = HorizontalAlignment.Center;
+            txtSoLuong.KeyPress += txtSLgDia_KeyPress;
             // 
             // btnXong
             // 
-            this.btnXong.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXong.Location = new System.Drawing.Point(184, 115);
-            this.btnXong.Name = "btnXong";
-            this.btnXong.Size = new System.Drawing.Size(75, 23);
-            this.btnXong.TabIndex = 2;
-            this.btnXong.Text = "&Xong";
-            this.btnXong.UseVisualStyleBackColor = true;
-            this.btnXong.Click += new System.EventHandler(this.btnXong_Click);
+            btnXong.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnXong.Location = new Point(49, 159);
+            btnXong.Margin = new Padding(4, 5, 4, 5);
+            btnXong.Name = "btnXong";
+            btnXong.Size = new Size(100, 35);
+            btnXong.TabIndex = 2;
+            btnXong.Text = "&Xong";
+            btnXong.UseVisualStyleBackColor = true;
+            btnXong.Click += btnXong_Click;
+            // 
+            // btnHuy
+            // 
+            btnHuy.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnHuy.Location = new Point(201, 159);
+            btnHuy.Name = "btnHuy";
+            btnHuy.Size = new Size(94, 29);
+            btnHuy.TabIndex = 3;
+            btnHuy.Text = "&Hủy";
+            btnHuy.UseVisualStyleBackColor = true;
             // 
             // frmSoLuong
             // 
-            this.AcceptButton = this.btnXong;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Linen;
-            this.ClientSize = new System.Drawing.Size(273, 154);
-            this.Controls.Add(this.btnXong);
-            this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.label1);
-            this.Name = "frmSoLuong";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSoLuong";
-            this.Load += new System.EventHandler(this.frmSoLuong_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AcceptButton = btnXong;
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Linen;
+            CancelButton = btnHuy;
+            ClientSize = new Size(364, 237);
+            Controls.Add(btnHuy);
+            Controls.Add(btnXong);
+            Controls.Add(txtSoLuong);
+            Controls.Add(label1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "frmSoLuong";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "frmSoLuong";
+            Load += frmSoLuong_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -90,5 +106,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Button btnXong;
+        private Button btnHuy;
     }
 }

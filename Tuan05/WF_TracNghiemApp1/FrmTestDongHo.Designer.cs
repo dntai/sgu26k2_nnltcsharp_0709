@@ -37,7 +37,7 @@
             // 
             ucDongHo1.BackColor = Color.Yellow;
             ucDongHo1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            ucDongHo1.Location = new Point(114, 44);
+            ucDongHo1.Location = new Point(151, 41);
             ucDongHo1.Margin = new Padding(5, 6, 5, 6);
             ucDongHo1.Name = "ucDongHo1";
             ucDongHo1.Size = new Size(226, 119);

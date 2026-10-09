@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
-using WF_TracNghiemApp1;
 
-namespace Buoi8_FrmPhieuKhaoSat
+namespace prj_Calendar
 {
     static class Program
     {
@@ -16,10 +14,7 @@ namespace Buoi8_FrmPhieuKhaoSat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new FrmTestDongHo());
-            // Application.Run(new FrmTestDeThi());
-            Application.Run(new FrmTest());
-            // Application.Run(new FrmKhaoSat());
+            Application.Run(new frmMonthCalendar());
         }
     }
 }
